@@ -1,20 +1,21 @@
 Usando o fluxo de trabalho Git Fork-and-Branch
-27 de janeiro de 2015 · Arquivado em Educação
-Agora que forneci uma introdução ao Git e uma breve visão geral do uso do Git com o GitHub , é hora de desenvolver esse conhecimento dando uma olhada mais de perto em um fluxo de trabalho frequentemente usado ao colaborar com o Git. O fluxo de trabalho “fork and branch” é uma forma comum de colaboração em projetos de código aberto usando Git e GitHub . Neste post, vou percorrer esse fluxo de trabalho (como eu o entendo - estou constantemente aprendendo), com o foco em ajudar aqueles que são novos nesse tipo de coisa.
+
+Agora que forneci uma introdução ao Git e uma breve visão geral do uso do Git com o GitHub , é hora de desenvolver esse conhecimento dando uma olhada mais de perto em um fluxo de trabalho frequentemente usado ao colaborar com o Git. O fluxo de trabalho “fork and branch” é uma forma comum de colaboração em projetos de código aberto usando Git e GitHub. Neste post, vou percorrer esse fluxo de trabalho (como eu o entendo - estou constantemente aprendendo), com o foco em ajudar aqueles que são novos nesse tipo de coisa.
 
 Se você é novo no Git e / ou GitHub e ainda não leu as postagens anteriores no Git e usando o Git com o GitHub, recomendo fortemente que você as leia primeiro.
 
 Basicamente, o fluxo de trabalho "fork and branch" é semelhante a este:
 
-Bifurque um repositório GitHub.
-Clone o repositório bifurcado em seu sistema local.
-Adicione um remoto Git para o repositório original.
-Crie um branch de recurso no qual colocar suas alterações.
-Faça suas alterações no novo branch.
-Faça commit das alterações no branch.
-Envie o branch para o GitHub.
-Abra uma solicitação pull do novo branch para o repositório original.
-Limpe depois que sua solicitação pull for mesclada.
+*Bifurque um repositório GitHub.
+*Clone o repositório bifurcado em seu sistema local.
+*Adicione um remoto Git para o repositório original.
+*Crie um branch de recurso no qual colocar suas alterações.
+*Faça suas alterações no novo branch.
+*Faça commit das alterações no branch.
+*Envie o branch para o GitHub.
+*Abra uma solicitação pull do novo branch para o repositório original.
+*Limpe depois que sua solicitação pull for mesclada.
+
 Aqui estão alguns detalhes sobre cada uma dessas etapas do fluxo de trabalho.
 
 Bifurcando um Repositório GitHub
@@ -60,9 +61,10 @@ Portanto, supondo que seu objetivo seja emitir uma solicitação pull para alter
 
 O fluxo básico se parece com isto (tudo isso está acontecendo em seu repositório Git local):
 
-Crie e verifique um branch de recurso .
-Faça alterações nos arquivos.
-Faça o commit de suas mudanças para o branch.
+*Crie e verifique um branch de recurso .
+*Faça alterações nos arquivos.
+*Faça o commit de suas mudanças para o branch.
+
 Devido à forma como o Git funciona, é incrivelmente rápido e fácil para os desenvolvedores criarem vários branches. Se você é relativamente novo no Git (como presumo que seja se estiver lendo isso), provavelmente vai querer ir com calma e não ficar totalmente louco com branches. Conforme estou aumentando minha familiaridade com o Git, estou aderindo a um único branch de recurso por vez.
 
 Para criar um novo branch e verificar (o que significa dizer ao Git que você fará alterações no branch), use este comando:
@@ -105,3 +107,7 @@ Para manter sua bifurcação sincronizada com o repositório original, use estes
 git pull upstream master
 git push origin master
 Isso puxa as alterações do repositório original (aquele apontado pelo upstreamremoto Git) e as envia para seu repositório bifurcado (aquele apontado pelo originremoto). (Esperançosamente, isso faz algum sentido para você agora.)
+
+Referência
+
+Usando o fluxo de trabalho Git Fork-and-Branch.Scott's Weblog, 2015.Disponível em: https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/. Acesso em: 05.10.2020
